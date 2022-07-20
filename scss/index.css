@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -112,10 +113,25 @@ img {
   margin-bottom: 104px;
 }
 
+.me-6 {
+  margin-right: 24px;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.f-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .justify-content-between {
@@ -128,7 +144,7 @@ img {
   background-image: url(../img/banner.png);
   background-size: cover;
   background-position: center center;
-  padding: 308px;
+  height: 958px;
   text-align: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -142,10 +158,20 @@ img {
   opacity: 0.5;
 }
 
+.header-content {
+  width: 304px;
+}
+
 h1 {
   font-size: 80px;
   line-height: 106px;
   margin-bottom: 32px;
+}
+
+h1 span {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
 }
 
 h2 {
@@ -153,11 +179,11 @@ h2 {
   line-height: 84px;
 }
 
-main, section {
+.section {
   padding: 56px;
 }
 
-main a:hover, section a:hover {
+.section a:hover {
   opacity: 0.5;
 }
 
@@ -181,7 +207,8 @@ main a:hover, section a:hover {
   color: white;
 }
 
-.red {
+.red::before {
+  content: "⬤";
   color: #891818;
   margin-right: 8px;
 }
